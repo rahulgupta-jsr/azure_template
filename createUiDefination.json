@@ -229,25 +229,6 @@
                         ]
                     },
                     {
-                        "name": "overprovisioningOption",
-                        "type": "Microsoft.Common.OptionsGroup",
-                        "label": "Overprovisioning",
-                        "defaultValue": "DISABLE",
-                        "toolTip": "Specify if you want to turn on overprovisioning in case of scale up event.[Read more](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-design-overview#overprovisioning)",
-                        "constraints": {
-                            "allowedValues": [
-                                {
-                                    "label": "ENABLE",
-                                    "value": true
-                                },
-                                {
-                                    "label": "DISABLE",
-                                    "value": false
-                                }
-                            ]
-                        }
-                    },
-                    {
                         "name": "scaleUpConfiguration",
                         "type": "Microsoft.Common.Section",
                         "label": "Scale UP threshold(s)",
@@ -834,7 +815,6 @@
             "scaleDownCpu": "[steps('autoScaleSettings').scaleDownConfiguration.downCpu]",
             "scaleDownNetworkIn": "[steps('autoScaleSettings').scaleDownConfiguration.downNetworkIn]",
             "scaleDownNetworkOut": "[steps('autoScaleSettings').scaleDownConfiguration.downNetworkOut]",
-            "azureOverprovisioning": "[steps('autoScaleSettings').overprovisioningOption]",
             "wafSharedSecret": "[steps('wafBootStrapSettings').wafSharedSecret]",
             "azureAuthenticationMethod": "[steps('azureApiSettings').authenticationMethod]",
             "azureUserId": "[steps('azureApiSettings').azureAdDetails.azureUserId]",
