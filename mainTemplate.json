@@ -276,6 +276,55 @@
         "description": "Backup filename which needs to be bootstrapped.If backup bootstrap details are configured, basic service bootstrap parameters will be ignored."
       }
     },
+    "licenseStorageAccountName": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "License Storage Account Name"
+      }
+    },
+    "licenseStorageAccountKey": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "License Storage Account Key"
+      }
+    },
+    "licenseContainerName": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "License Storage Container Name"
+      }
+    },
+    "defaultDomainName": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "Domain Name"
+      }
+    },
+    "eulaUserName": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "Name of the user accepting EULA."
+      }
+    },
+    "eulaUserEmail": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "Email ID of the user accepting the EULA."
+      }
+    },
+    "eulaUserCompany": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "Compnay Name of the user accepting EULA."
+      }
+    },
     "wafServiceName": {
       "type": "string",
       "defaultValue": "waf_service_1",
@@ -403,7 +452,7 @@
     "wafClusteringMode": "[if(parameters('azureOverprovisioning'), 'ALL_PEER_METHOD', 'MASTER_SLAVE_METHOD')]",
     "imagePublisher": "barracudanetworks",
     "imageVersion": "latest",
-    "imageSKU": "hourly",
+    "imageSKU": "byol",
     "imageOffer": "waf",
     "useNewStorageAccount": "[equals(parameters('storageAccountNewOrExisting'), 'new')]",
     "useNewVnet": "[equals(parameters('vNETNewOrExisting'), 'new')]",
@@ -444,7 +493,14 @@
       "service_port": "[parameters('wafServicePort')]",
       "servers": "[parameters('wafServers')]",
       "waf_oms_primary_key": "[parameters('wafOmsPrimaryKey')]",
-      "waf_oms_workspace_id": "[parameters('wafOmsWorkspaceId')]"
+      "waf_oms_workspace_id": "[parameters('wafOmsWorkspaceId')]",
+      "license_storage_account": "[parameters('licenseStorageAccountName')]",
+      "license_storage_account_key": "[parameters('licenseStorageAccountKey')]",
+      "license_container_name": "[parameters('licenseContainerName')]",
+      "default_domain": "[parameters('defaultDomainName')]",
+      "signature": "[parameters('eulaUserName')]",
+      "email": "[parameters('eulaUserEmail')]",
+      "organization": "[parameters('eulaUserCompany')]"
     },
     "barracudaNetworksTags": {
       "type": "object",
