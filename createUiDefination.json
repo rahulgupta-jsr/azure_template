@@ -860,7 +860,11 @@
             "albHealthProbeUnhealthyThreshold": "[steps('azureLoadBalancerSettings').albHealthProbe.unhealthyThreshold]",
             "albRuleFrontEndPort": "[steps('azureLoadBalancerSettings').albLoadBalanceRule.frontEndPort]",
             "albRuleBackEndPort": "[steps('azureLoadBalancerSettings').albLoadBalanceRule.backEndPort]",
-            "albRulePersistency": "[steps('azureLoadBalancerSettings').albLoadBalanceRule.sessionPersistence]"
+            "albRulePersistency": "[steps('azureLoadBalancerSettings').albLoadBalanceRule.sessionPersistence]",
+            "eulaUserName": "[steps('wafBootStrapSettings').eulaDetails.eulaUserName]",
+            "eulaUserEmail": "[steps('wafBootStrapSettings').eulaDetails.eulaUserName]",
+            "eulaUserCompany": "[steps('wafBootStrapSettings').eulaDetails.eulaUserName]",
+            "defaultDomainName": "[steps('wafBootStrapSettings').eulaDetails.eulaUserName]"
         }
     }
 }
