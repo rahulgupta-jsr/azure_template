@@ -337,12 +337,11 @@
                         "name": "notifyEmailAddresses",
                         "type": "Microsoft.Common.TextBox",
                         "label": "Notification Email ID(s) in csv format",
-                        "defaultValue": "",
                         "toolTip": "Enter valid email address(es) to send autoSclaing event notifications. e.g. abc@example.com,xyz@example.com",
                         "constraints": {
                             "required": false,
                             "regex" : "^(([\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}),?)+$",
-                            "validationMessage": " "
+                            "validationMessage": "Please configure valid email id is csv format"
                         }
                     }
                 ]
@@ -385,7 +384,6 @@
                                 "name": "azureUserId",
                                 "type": "Microsoft.Common.TextBox",
                                 "label": "Azure User ID",
-                                "defaultValue": " ",
                                 "toolTip": "Azure User ID",
                                 "constraints": {
                                     "required": true,
@@ -422,7 +420,6 @@
                                 "name": "azureClientId",
                                 "type": "Microsoft.Common.TextBox",
                                 "label": "Client ID",
-                                "defaultValue": " ",
                                 "toolTip": "Client ID",
                                 "constraints": {
                                     "required": true,
@@ -434,7 +431,6 @@
                                 "name": "azureTenantId",
                                 "type": "Microsoft.Common.TextBox",
                                 "label": "Tenant ID",
-                                "defaultValue": " ",
                                 "toolTip": "Tenant ID",
                                 "constraints": {
                                     "required": true,
@@ -446,7 +442,6 @@
                                 "name": "azureSecretKey",
                                 "type": "Microsoft.Common.TextBox",
                                 "label": "Azure Secret Key",
-                                "defaultValue": " ",
                                 "toolTip": "Azure Secret Key",
                                 "constraints": {
                                     "regex": ".{6,}",
@@ -541,7 +536,6 @@
                                 "name": "wafBackendServers",
                                 "type": "Microsoft.Common.TextBox",
                                 "label": "Backend Servers(IP:PORT)",
-                                "defaultValue": " ",
                                 "toolTip": "Specify backend servers in identifier:port format. e.g. 10.0.0.4:80,www.example.com:80",
                                 "constraints": {
                                     "required": true,
@@ -561,7 +555,6 @@
                                 "name": "azureStorageAccountName",
                                 "type": "Microsoft.Common.TextBox",
                                 "label": "Azure Storage Account Name",
-                                "defaultValue": " ",
                                 "toolTip": "Specify storage account where backup file is stored.",
                                 "constraints": {
                                     "required": true,
@@ -584,7 +577,6 @@
                                 "name": "azureStorageBlobName",
                                 "type": "Microsoft.Common.TextBox",
                                 "label": "Azure Storage Blob Name",
-                                "defaultValue": " ",
                                 "toolTip": "Specify Blob name where backup file is stored.",
                                 "constraints": {
                                     "required": true,
